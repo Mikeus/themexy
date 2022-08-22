@@ -17,7 +17,16 @@
 <?php } ?>
 <?php the_posts_pagination(); ?>
 <?php } else { ?>
-<p> <?php __('Sorry, no posts matched your criteria.', 'themexy') ?> </p>
+<p> <?php _e('Sorry, no posts matched your criteria.', 'themexy') ?> </p>
 <?php } ?>
+
+<?php 
+
+$comments = 10;
+
+printf(_n('One Comment', '%s comments', $comments, 'themexy'), $comments) ;
+
+?>
+
 
 <?php get_footer(); ?>
